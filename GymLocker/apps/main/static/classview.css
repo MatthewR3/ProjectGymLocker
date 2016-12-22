@@ -1,0 +1,122 @@
+h4 {
+	margin-bottom: 40px;
+}
+
+#searchbar {
+	float: left;
+	display: inline-block;
+	color: #333;
+	background-color: #FCFCFC;
+	height: 50px;
+	width: 20%;
+	font-size: 25px;
+	line-height: 50px;
+	border: 2px solid #7DABFF;
+	/* Clears top/bottom padding */
+	padding: 0;
+	padding-left: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#searchbar:hover, #searchbar:focus {
+	border: 2px solid #969696;
+	border-radius: 0;
+	outline: none;
+}
+
+#expandall {
+	float: right;
+	display: inline-block;
+	color: #333;
+	background-color: #FCFCFC;
+	height: 50px;
+	width: 40%;
+	font-size: 25px;
+	line-height: 46px;
+	border: 2px solid #7DABFF;
+	padding: 0px;
+	margin-left: 5%;
+}
+
+#expandall:hover, #expandall:focus {
+	border: 2px solid #969696;
+	text-shadow: 0px 0px 1px #969696;
+	cursor: pointer;
+	outline: none;
+}
+
+#expandall:active {
+	font-size: 23px;
+}
+
+#results {
+	width: 100%;
+	min-height: 300px;
+	margin-top: 100px;
+}
+
+#resultstable {
+	width: 100%;
+}
+
+#resultstable thead {
+	height: 50px;
+	line-height: 50px;
+	font-size: 24px;
+	background-color: #9EC0FF;
+}
+
+#resultstable thead:hover {
+	cursor: pointer;
+}
+
+#resultstable tbody tr {
+	height: 50px;
+	line-height: 50px;
+}
+
+#resultstable tbody tr:nth-child(even) {
+	background-color: #E8F0FF;
+}
+
+#resultstable tbody tr a {
+	color: #5C96FF;
+}
+
+#resultstable tbody tr a:hover {
+	color: #333;
+}
+
+.image {
+	height: 30px;
+	width: 30px;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+
+
+
+/* MEDIA QUERIES */
+
+
+
+@media (max-width: 1200px) {
+
+	.sidebutton {
+		font-size: 1.6vw;
+	}
+
+	.sidebutton:active {
+		font-size: 1.5vw;
+	}
+
+	.listinglisttable tr td {
+		font-size: 1.6vw;
+	}
+
+	.listingdivvalue {
+		font-size: 1.4vw !important;
+	}
+}

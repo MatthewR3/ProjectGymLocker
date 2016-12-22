@@ -1,0 +1,144 @@
+.searchbar {
+	display: inline-block;
+	color: #333;
+	background-color: #FCFCFC;
+	height: 50px;
+	width: 20%;
+	font-size: 25px;
+	line-height: 50px;
+	border: 2px solid #7DABFF;
+	/* Clears top/bottom padding */
+	padding: 0;
+	padding-left: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.searchbar:hover, .searchbar:focus {
+	border: 2px solid #969696;
+	border-radius: 0;
+	outline: none;
+}
+
+h1 {
+	display: inline;
+	line-height: 80px;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+#addsearch {
+	height: 50px;
+	width: 50%;
+	margin: auto;
+	margin-top: 30px;
+	border: 2px dashed #7DABFF;
+	line-height: 50px;
+	font-size: 24px;
+	color: #969696;
+}
+
+#addsearch:hover {
+	cursor: pointer;
+}
+
+#limitbar {
+	height: 50px;
+	width: 50%;
+	margin: auto;
+	margin-top: 40px;
+	border: 2px solid #7DABFF;
+	line-height: 50px;
+	font-size: 24px;
+	color: #333;
+}
+
+#limitbar div {
+	display: inline-block;
+	float: left;
+	width: 25%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-left: 2px solid #7DABFF;
+}
+
+#limitbar div:first-child {
+	border-left: 0;
+	background-color: #7DABFF;
+}
+
+#limitbar div:hover {
+	cursor: pointer;
+}
+
+#results {
+	width: 100%;
+	min-height: 300px;
+	margin-top: 100px;
+}
+
+#resultstable {
+	width: 100%;
+}
+
+#resultstable thead {
+	height: 50px;
+	line-height: 50px;
+	font-size: 24px;
+	background-color: #9EC0FF;
+}
+
+#resultstable thead:hover {
+	cursor: pointer;
+}
+
+#resultstable tbody tr {
+	height: 50px;
+	line-height: 50px;
+}
+
+#resultstable tbody tr:nth-child(even) {
+	background-color: #E8F0FF;
+}
+
+#resultstable tbody tr a {
+	color: #5C96FF;
+}
+
+#resultstable tbody tr a:hover {
+	color: #333;
+}
+
+.image {
+	height: 30px;
+	width: 30px;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+
+
+
+/* MEDIA QUERIES */
+
+
+
+@media (max-width: 1200px) {
+
+	.sidebutton {
+		font-size: 1.6vw;
+	}
+
+	.sidebutton:active {
+		font-size: 1.5vw;
+	}
+
+	.listinglisttable tr td {
+		font-size: 1.6vw;
+	}
+
+	.listingdivvalue {
+		font-size: 1.4vw !important;
+	}
+}

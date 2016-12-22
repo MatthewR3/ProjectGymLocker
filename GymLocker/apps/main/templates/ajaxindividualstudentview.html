@@ -1,0 +1,71 @@
+{% load staticfiles %}
+
+<div class="studentblock" id="studentblock{{ student.1 }}">
+	<div class="studentblockcancel">
+		<input type="button" onClick="remove_student({{ student.1 }})" value="x">
+	</div>
+	<div class="studentblockheader">
+		<h4>{{ student.1 }}</h4>
+	</div>
+	<table class="studentblocktable" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>First Name:</td>
+			<td id="{{ student.1 }}firstname">{{ student.3 }}</td>
+			<td><button id="{{ student.1 }}firstnameinput" onClick="update_student('{{ student.1 }}-firstname')"><img class="cog" src="{% static "cog.png" %}"></td>
+		<tr>
+			<td>Last Name:</td>
+			<td id="{{ student.1 }}lastname">{{ student.2 }}</td>
+			<td><button id="{{ student.1 }}lastnameinput" onClick="update_student('{{ student.1 }}-lastname')"><img class="cog" src="{% static "cog.png" %}"></td>
+		<tr>
+			<td>Teacher:</td>
+			<td id="{{ student.1 }}teacher">{{ student.7 }}</td>
+			<td><button id="{{ student.1 }}teacherinput" onClick="update_student('{{ student.1 }}-teacher')"><img class="cog" src="{% static "cog.png" %}"></td>
+		<tr>
+			<td>Period:</td>
+			<td id="{{ student.1 }}period">{{ student.8 }}</td>
+			<td><button id="{{ student.1 }}periodinput" onClick="update_student('{{ student.1 }}-period')"><img class="cog" src="{% static "cog.png" %}"></td>
+		<tr>
+			<td>Tardies:</td>
+			<td id="{{ student.1 }}tardies">{{ student.5 }}</td>
+			<td><button id="{{ student.1 }}tardiesinput" onClick="update_student('{{ student.1 }}-tardies')"><img class="cog" src="{% static "cog.png" %}"></td>
+		<tr>
+			<td>Rentals:</td>
+			<td id="{{ student.1 }}rentals">{{ student.6 }}</td>
+			<td><button id="{{ student.1 }}rentalsinput" onClick="update_student('{{ student.1 }}-rentals')"><img class="cog" src="{% static "cog.png" %}"></td>
+		<tr>
+			<td>YIS:</td>
+			<td id="{{ student.1 }}yis">{{ student.4 }}</td>
+			<td><button id="{{ student.1 }}yisinput" onClick="update_student('{{ student.1 }}-yis')"><img class="cog" src="{% static "cog.png" %}"></td>
+		<tr>
+			<td>Gender:</td>
+			<td id="{{ student.1 }}gender">{{ student.9 }}</td>
+			<td><button id="{{ student.1 }}genderinput" onClick="update_student('{{ student.1 }}-gender')"><img class="cog" src="{% static "cog.png" %}"></td>
+		<tr>
+			<td>Locker Number:</td>
+			<td id="{{ student.1 }}lockernumber">{{ student.10 }}</td>
+			<td><button id="{{ student.1 }}lockernumberinput" onClick="update_student('{{ student.1 }}-lockernumber')"><img class="cog" src="{% static "cog.png" %}"></td>
+		</tr>
+	</table>
+	<p>Note: </p><button class="noteinput" id="{{ student.1 }}noteinput" onClick="update_student('{{ student.1 }}-note')"><img class="cog" src="{% static "cog.png" %}"></button>
+	<div class="studentnote" id="{{ student.1 }}note">
+		{% if student.11 != "" %}
+		<p>{{ student.11 }}</p>
+		{% else %}
+		<p></p>
+		{% endif %}
+	</div>
+	{% if owned_locks %}
+	<span class="locktext">Locks</span>
+	<select class="selectbar" id="{{ student.1 }}_selectbar">
+		{% for lock in owned_locks %}
+		<option value="{{ lock.1 }}">{{ lock.1  }}</option>
+		{% endfor %}
+	</select>
+	<p class="combination" id="{{ student.1 }}_combination">{{ owned_locks.0.2}}</p>
+	{% else %}
+	<span class="locktext">No Locks</span>
+	{% endif %}
+	{% for lock in owned_locks %}
+	<input class="lock" type="hidden" value="{{ lock.1 }}_{{ lock.2 }}">
+	{% endfor %}
+</div>

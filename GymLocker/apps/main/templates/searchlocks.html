@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Search Locks{% endblock %}
+
+{% block head %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static "searchlocks.css" %}">
+<script src="{% static "ajaxsearchlocks.js" %}"></script>
+<script src="{% static "searchlocks.js" %}"></script>
+<script src="{% static "jquery.tablesorter.min.js" %}"></script>
+<script src="{% static "sortabletablecustom.js" %}"></script>
+{% endblock %}
+
+{% block body %}
+<h4>You may hold down shift and select multiple columns to sort by</h4>
+<h1>Search for locks where</h1></br>
+<select class="searchbar searchattribute" id="attributesearch">
+	<option value="serial">Serial</option>
+	<option value="combination">Combination</option>
+</select><h1>is</h1><input class="searchbar searchvalue" id="valuesearch" type="text" placeholder="Value"></br> <!-- Elements on one line to fix spacing issues -->
+<div id="addsearch">Add Search Parameter</div>
+<div id="limitbar">
+	<div>20</div>
+	<div>50</div>
+	<div>100</div>
+	<div>All</div>
+</div>
+<input id="limit" type="hidden" value="20">
+<div id="results">
+</div>
+{% endblock %}
+
+<h1>Search for locks where</h1></br>
+ <select class="searchbar" id="attributesearch">
+ 	<option value="serial">Serial</option>
+ 	<option value="combination">Combination</option>
+ </select>
+<h1>is</h1>
+<input class="searchbar" id="valuesearch" type="text" placeholder="Value">
+<div id="results">
+</div>

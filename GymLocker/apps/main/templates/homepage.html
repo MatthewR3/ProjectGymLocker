@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static "homepage.css" %}">
+<script src="{% static "homepage.js" %}"></script>
+{% endblock %}
+
+{% block body %}
+<div id="wrapper">
+	<div>
+		<div class="subtop"><img class="image" src="{% static "plus_sign.png" %}"></div>
+		<a class="sublink" href="/add/students/"><div class="submiddle">Add Student</div></a>
+		<a class="sublink" href="/add/locks/"><div class="subbottom">Add Lock</div></a>
+	</div>
+	<div>
+		<div class="subtop"><img class="image" src="{% static "mag_glass.png" %}"></div>
+		<a class="sublink" href="/search/students/"><div class="submiddle">Search Students</div></a>
+		<a class="sublink" href="/search/locks/"><div class="subbottom">Search Locks</div></a>
+	</div>
+	<div>
+		<div class="subtop"><img class="image" src="{% static "person_lock.png" %}"></div>
+		<a class="sublink" href="/view/individual/students/"><div class="submiddle">View Individual Students</div></a>
+		<a class="sublink" href="/view/individual/locks/"><div class="subbottom">View Individual Locks</div></a>
+	</div>
+</div>
+<div id="classview">
+	<div id="classviewleft"><img id="classviewimage" src="{% static "class.png" %}"></div>
+	<div id="classviewright">
+		<!-- <div id="righttop">View</div> -->
+		<a href="/view/class/{{ user }}"><div id="rightmiddle">View Your Class</div></a>
+		<a href="/view/class/prompt/"><div id="rightbottom">View Another Class</div></a>
+	</div>
+</div></br></br></br>
+<!--
+<a id="classviewlink" href="/view/class/{{ user }}">Class</br>View</a>
+<a class="sidelink" href="/view/class/prompt/">View Other Classes</a>
+<a class="sidelink" href="/search/students/">Search Students</a>
+<a class="sidelink" href="/search/locks/">Search Locks</a>
+<a class="bottomlink" href="/view/individual/students/">View Individual Students</a>
+<a class="bottomlink" href="/view/individual/locks/">View Individual Locks</a>
+<a class="bottomlink" href="/add/students/">Add Student</a>
+<a class="bottomlink" href="/add/locks/">Add Lock</a>
+-->
+{% if user.is_superuser %}
+<a href="/edit/mass/confirm/id/all/yis/+1"><div class="bottomlink">+1 to all students' YIS</div></a>
+<a href="/edit/mass/"><div class="bottomlink" id="bottomlinkmiddle">Mass Student Edit</div></a>
+<a href="/delete/mass/"><div class="bottomlink">Mass Student Delete</div></a>
+{% endif %}
+{% endblock %}

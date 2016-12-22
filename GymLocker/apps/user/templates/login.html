@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block head %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static "login.css" %}">
+{% endblock %}
+
+{% block body %}
+<div id="container">
+	<form method="post">
+		{% csrf_token %}
+		<table cellpadding="0" cellspacing="0">
+			<tr>
+				<td>Teacher ID:</td>
+				<td>{{ login_form.username }}</td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td>{{ login_form.password }}</td>
+			</tr>
+		</table>
+		<input type="submit" value="Login" id="submit"></input>
+	</form>
+</div>
+{% endblock %}

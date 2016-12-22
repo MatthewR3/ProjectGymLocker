@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Lock Added{% endblock %}
+
+{% block head %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static "addstudentdone.css" %}">
+{% endblock %}
+
+{% block body %}
+{% if status == False %}
+<h1>Lock Addition Failure</h1>
+<h4>If you are unsure of why this occurred, contact Tech Intern</h4>
+<input type="button" onClick="location.href='/add/locks/'" value="Try Again">
+{% elif status == "unoriginal" %}
+<h1>Lock Addition Failure</h1>
+<h4>A lock with that serial number and combination already exists</h4>
+<input type="button" onClick="location.href='/add/locks/'" value="Try Again">
+{% elif status == "missing" %}
+<h1>Lock Addition Failure</h1>
+<h4>There are no students with that ID number</h4>
+<input type="button" onClick="location.href='/add/locks/'" value="Try Again">
+{% else %}
+<h1>Lock Addition Successful</h1>
+<table id="formtable" cellpadding="0" cellspacing="0">
+	<tr><td>Serial</td><td>{{ lock.1 }}</td></tr>
+	<tr><td>Combination</td><td>{{ lock.2 }}</td></tr>
+	<tr><td>Owner</td><td>{% if lock.3 != None %}{{ owner.3 }} {{ owner.2 }}{% else %}{% endif %}</td></tr>
+</table>
+<input type="button" onClick="location.href='/view/individual/locks/{{ lock.1 }}'" value="View Lock">
+{% endif %}
+{% endblock %}

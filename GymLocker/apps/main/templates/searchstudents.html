@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Search Students{% endblock %}
+
+{% block head %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static "searchstudents.css" %}">
+<script src="{% static "ajaxsearchstudents.js" %}"></script>
+<script src="{% static "ajaxadders.js" %}"></script>
+<script src="{% static "searchstudents.js" %}"></script>
+<script src="{% static "jquery.tablesorter.min.js" %}"></script>
+<script src="{% static "sortabletablecustom.js" %}"></script>
+{% endblock %}
+
+{% block body %}
+<h4>You may enter < or > when searching with ID, YIS, Period, Tardies, or Rentals</h4>
+<h4>You may hold down shift and select multiple columns to sort by</h4>
+<h1>Search for students where</h1></br>
+<select class="searchbar searchattribute" id="attributesearch">
+	<option value="student_id">ID</option>
+	<option value="first_name">First Name</option>
+	<option value="last_name">Last Name</option>
+	<option value="yis">YIS</option>
+	<option value="teacher">Teacher</option>
+	<option value="locker_number">Locker Number</option>
+	<option value="period">Period</option>
+	<option value="gender">Gender</option>
+	<option value="tardies">Tardies</option>
+	<option value="rentals">Rentals</option>
+</select><h1>is</h1><input class="searchbar searchvalue" id="valuesearch" type="text" placeholder="Value"></br> <!-- Elements on one line to fix spacing issues -->
+<div id="addsearch">Add Search Parameter</div>
+<div id="limitbar">
+	<div>20</div>
+	<div>50</div>
+	<div>100</div>
+	<div>All</div>
+</div>
+<input id="limit" type="hidden" value="20">
+<div id="results">
+</div>
+{% endblock %}

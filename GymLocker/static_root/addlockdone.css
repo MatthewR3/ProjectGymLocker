@@ -1,0 +1,82 @@
+h4 {
+	margin-top: 50px;
+}
+
+#formtable {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0 10px;
+}
+
+#formtable tr td {
+	height: 50px;
+	width: 50%;
+	line-height: 50px;
+	font-size: 25px;
+	vertical-align: middle !important;
+	border: 0;
+}
+
+/*
+#formtable tr td:first-child {
+	width: 20%;
+}
+*/
+
+input[type="text"] {
+	display: block;
+	color: #333;
+	background-color: #FCFCFC;
+	height: 100%;
+	width: 80%;
+	font-size: 25px;
+	line-height: 50px;
+	border: 2px solid ##7DABFF;
+	/* Clears top/bottom padding */
+	padding: 0;
+	padding-left: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+input[type="text"]:hover, input[type="text"]:focus {
+	border: 2px solid #969696;
+	border-radius: 0;
+	outline: none;
+}
+
+input[type="button"] {
+	display: block;
+	color: #333;
+	background-color: #FCFCFC;
+	height: 50px;
+	width: 60%;
+	font-size: 25px;
+	line-height: 46px;
+	border: 2px solid ##7DABFF;
+	margin-top: 50px;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-bottom: 50px;
+	/* Clears top/bottom padding */
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+input[type="button"]:hover {
+	border: 2px solid #969696;
+	border-radius: 0;
+	outline: none;
+	cursor: pointer;
+}
+
+input[type="button"]:active {
+	font-size: 23px;
+}
+
+input[type="button"]:focus {
+	outline: none;
+}

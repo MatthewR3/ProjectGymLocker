@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Student Added{% endblock %}
+
+{% block head %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static "addstudentdone.css" %}">
+{% endblock %}
+
+{% block body %}
+{% if status == False %}
+<h1>Student Addition Failure</h1>
+<h4>If you are unsure of why this occurred, contact Tech Intern</h4>
+<input type="button" onClick="location.href='/add/students/'" value="Try Again">
+{% elif status == "unoriginal" %}
+<h1>Student Addition Failure</h1>
+<h4>A student with that ID number already exists</h4>
+<input type="button" onClick="location.href='/add/students/'" value="Try Again">
+{% else %}
+<h1>Student Addition Successful</h1>
+<table id="formtable" cellpadding="0" cellspacing="0">
+	<tr><td>ID Number</td><td>{{ student.1 }}</td></tr>
+	<tr><td>First Name</td><td>{{ student.3 }}</td></tr>
+	<tr><td>Last Name</td><td>{{ student.2 }}</td></tr>
+	<tr><td>Year in School (YIS)</td><td>{{ student.4 }}</td></tr>
+	<tr><td>Teacher</td><td>{{ student.7 }}</td></tr>
+	<tr><td>Period</td><td>{% if student.8 == None %}{% else %}{{ student.8 }}{% endif %}</td></tr>
+	<tr><td>Gender</td><td>{{ student.9 }}</td></tr>
+	<tr><td>Locker Number</td><td>{{ student.10 }}</td></tr>
+	<tr><td>Note</td><td>{{ student.11 }}</td></tr>
+</table>
+<input type="button" onClick="location.href='/view/individual/students/{{ student.1 }}'" value="View Student">
+{% endif %}
+{% endblock %}

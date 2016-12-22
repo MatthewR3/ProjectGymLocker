@@ -1,0 +1,315 @@
+.studentblock {
+	min-height: 630px;
+	width: 47%;
+	display: inline-block;
+	float: left;
+	border: 2px solid #7DABFF;
+	margin-bottom: 50px;
+	padding-bottom: 50px;
+	text-align: left;
+}
+
+.studentblock:nth-child(2n+1) {
+	margin-right: 5%;
+}
+
+.studentblockheader {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-bottom: 2px solid #7DABFF;
+	margin-bottom: 20px;
+}
+
+.studentblockheader h4 {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 20%;
+	font-weight: normal;
+}
+
+.studentblockcancel {
+	position: relative;
+	float: right;
+	width: 20%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-left: 2px solid #7DABFF;
+}
+
+.studentblockcancel input {
+	width: 100%;
+	height: 100%;
+	font-size: 30px;
+	background-color: #FCFCFC;
+	outline: none;
+	border: 0;
+	color: #333;
+}
+
+.studentblockcancel input:hover {
+	background-color: #7DABFF;
+	cursor: pointer;
+}
+
+.studentblockcancel input:active {
+	font-size: 28px;
+}
+
+.studentblocktable {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	border-collapse: separate;
+	border-spacing: 0 5px;
+}
+
+.studentblocktable tr td {
+	font-size: 1vw;
+	height: 30px;
+}
+
+.studentblocktable tr td:last-child {
+	width: 30px;
+}
+
+.studentblocktable tr td button {
+	width: 100%;
+	height: 30px;
+	line-height: 24px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background-image: url("cog.png");
+}
+
+.studentblocktable tr td button:hover {
+	cursor: pointer;
+}
+
+.studentblocktable tr td button:focus {
+	outline: none;
+}
+
+.cog {
+	height: 25px;
+	width: 25px;
+}
+
+.studentblock > p {
+	padding-left: 10%;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	display: inline-block;
+}
+
+.noteinput {
+	width: 30.5px;
+	height: 30px;
+	display: inline-block;
+	float: right;
+	background-color: #FCFCFC;
+	margin-right: 10.1%;
+	padding: 0;
+	border: 0;
+}
+
+.noteinput:hover {
+	cursor: pointer;
+}
+
+.noteinput:focus {
+	outline: none;
+}
+
+.studentnote {
+	width: 80%;
+	min-height: 60px;
+	max-height: 168px;
+	line-height: 30px;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: 2px solid #7DABFF;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: auto;
+}
+
+.studentnote p {
+	display: block;
+	margin: 0;
+	padding-left: 5%;
+	padding-right: 5%;
+	word-wrap: break-word;
+}
+
+.locktext {
+	display: block;
+	font-size: 24px;
+	text-align: center;
+	padding: 0;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.selectbar {
+	display: inline-block;
+	color: #333;
+	background-color: #FCFCFC;
+	height: 50px;
+	width: 40%;
+	font-size: 25px;
+	line-height: 50px;
+	border: 2px solid #7DABFF;
+	margin-left: 10%;
+	/* Clears top/bottom padding */
+	padding: 0;
+	padding-left: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.selectbar:hover, .selectbar:focus {
+	border: 2px solid #969696;
+	border-radius: 0;
+	outline: none;
+}
+
+.combination {
+	font-size: 24px;
+}
+
+
+
+
+
+
+
+
+#addstudentblock {
+	height: 680px;
+	width: 47%;
+	display: inline-block;
+	float: left;
+	border: 2px dashed #7DABFF;
+	margin-bottom: 50px;
+}
+
+#addstudentblock span {
+	margin-top: 100px;
+	font-size: 200px;
+	display: block;
+}
+
+#addstudentblock label {
+	font-size: 40px;
+	line-height: 50px;
+	display: inline-block;
+	vertical-align: bottom;
+	margin-right: 5%;
+}
+
+#addstudenttext {
+	width: 40%;
+	height: 50px;
+	line-height: 50px;
+	border: 2px solid #969696;
+	font-size: 30px;
+	color: #333;
+	padding-left: 10px;
+	/* clear top/bottom padding */
+	padding: 0;
+	padding-left: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#addstudenttext:hover, #addstudenttext:focus {
+	border: 2px solid #333;
+	border-radius: 0;
+	outline: none;
+}
+
+#addstudentblock p {
+	font-size: 18px;
+	margin-top: 30px;
+}
+
+.updateinput {
+	width: 50% !important;
+	height: 25px !important;
+	display: inline-block;
+	padding-left: 5px !important;
+	background-color: #FCFCFC !important;
+	border: 2px solid #7DABFF;
+	font-size: 18px;
+}
+
+.updateinput:hover {
+	cursor: text !important;
+	font-size: 18px !important;
+	border: 2px solid #969696;
+}
+
+.updateinput:focus {
+	outline: none;
+	border: 2px solid #969696;
+}
+
+.updatenoteinput {
+	font-size: 18px;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 5%;
+	padding-right: 5%;
+	word-wrap: break-word;
+	border: 2px solid #969696;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	max-height: 160px;
+	overflow: auto;
+	word-wrap: break-word;
+}
+
+.updatenoteinput:hover {
+	border-color: #333;
+}
+
+.updatenoteinput:focus {
+	outline: none;
+	border-color: #333;
+}
+
+.updatenoteinput p {
+	display: block;
+	margin: 0;
+	word-wrap: break-word;
+}
+
+h2 {
+	text-align: center;
+	margin-top: 100px;
+}
+
+
+
+/* MEDIA QUERIES */
+
+
+
+@media (max-width: 1200px) {
+
+	.studentblocktable tr td {
+		font-size: 1.6vw;
+	}
+}

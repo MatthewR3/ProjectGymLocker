@@ -1,0 +1,125 @@
+#wrapper {
+    display: table;
+    table-layout: fixed;
+    border: 2px solid #7DABFF;
+    width: 100%;
+    height: 500px;
+}
+
+#wrapper > div {
+    display: table-cell;
+    border-collapse: collapse;
+}
+
+#wrapper > div:nth-child(2) {
+	border-left: 2px solid #7DABFF;
+	border-right: 2px solid #7DABFF;
+	background-color: #E8F0FF;
+}
+
+.subtop {
+	height: 350px; /*70%*/
+	width: 100%;
+	padding-top: 0;
+	border-bottom: 2px solid #7DABFF;
+}
+
+.submiddle {
+	height: 75px; /*15%*/
+	width: 100%;
+	border-bottom: 2px solid #7DABFF;
+	vertical-align: middle;
+}
+
+.submiddle:nth-child(2) {
+	background-color: #E8F0FF;
+}
+
+.subbottom {
+	height: 75px; /*15%*/
+	width: 100%;
+	vertical-align: middle;
+}
+
+.subbottom:nth-child(2) {
+	background-color: #E8F0FF;
+}
+
+.sublink {
+	font-size: 24px;
+	line-height: 75px;
+	color: #333;
+	border: 0 !important;
+}
+
+.image {
+	display: table-cell;
+	height: 60%;
+	padding-top: 10%;
+	margin: auto;
+}
+
+#classview {
+	display: table;
+	height: 300px;
+	width: 100%;
+	border: 2px solid #7DABFF;
+	border-top: 0;
+}
+
+#classviewleft {
+	display: inline-block;
+	float: left;
+	width: 50%;
+	height: 300px;
+	border-right: 2px solid #7DABFF;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+#classviewimage {
+	display: table-cell;
+	height: 200px;
+	margin: auto;
+	padding-top: 50px;
+}
+
+#classviewright {
+	display: inline-block;
+	width: 50%;
+}
+
+#classviewright > div, #classviewright > a > div{
+	height: 150px;
+	line-height: 150px;
+	color: #333;
+	font-size: 24px;
+	vertical-align: middle; 
+}
+
+#rightmiddle {
+	/*border-top: 2px solid #7DABFF;*/
+	border-bottom: 2px solid #7DABFF;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.bottomlink {
+	display: inline-block;
+	color: #333;
+	/*background-color: #BBEEFF;*/
+	background-color: #FCFCFC;
+	border-color: #7DABFF !important;
+	width: 100%;
+	height: 50px;
+	line-height: 46px;
+	font-size: 25px;
+	border: 2px solid #7DABFF;
+}
+
+#bottomlinkmiddle {
+	border-top: 0;
+	border-bottom: 0;
+}

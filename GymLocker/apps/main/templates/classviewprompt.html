@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Select Teacher{% endblock %}
+
+{% block head %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static "classviewprompt.css" %}">
+<script src="{% static "classviewpromptredirect.js" %}"></script>
+{% endblock %}
+
+{% block body %}
+<h1>Select the teacher whose class you wish to view</h1>
+<select id="selectbar">
+	{% for teacher in teacher_names %}
+	<option value="{{ teacher.0 }}">{{ teacher.1  }}</option>
+	{% endfor %}
+</select>
+<input id="submitbutton" type="button" value="View Class" onClick="get_class()">
+{% endblock %}

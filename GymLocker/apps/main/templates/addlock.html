@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Add Lock{% endblock %}
+
+{% block head %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static "addlock.css" %}">
+{% endblock %}
+
+{% block body %}
+<h1>Add Lock to Database</h1>
+<form action="/add/locks/" method="post">
+	{% csrf_token %}
+	<table id="formtable" cellpadding="0" cellspacing="0">
+		<tr><td>Serial Number</td><td>{{ form.serial }}</td></tr>
+		<tr><td>Combination</td><td>{{ form.combination }}</td></tr>
+		<tr><td>Owner's ID Number</td><td>{{ form.owner }}</td></tr>
+	</table>
+	<input type="submit" value="Add Lock">
+</form>
+{% endblock %}

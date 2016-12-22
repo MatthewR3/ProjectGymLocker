@@ -1,0 +1,255 @@
+h4 {
+	margin-bottom: 50px;
+}
+
+.lockblock {
+	height: 400px;
+	width: 47%;
+	display: inline-block;
+	float: left;
+	border: 2px solid #7DABFF;
+	margin-bottom: 50px;
+	text-align: left;
+}
+
+.lockblock:nth-child(2n) {
+	margin-right: 5%;
+}
+
+.lockblockheader {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-bottom: 2px solid #7DABFF;
+	margin-bottom: 20px;
+}
+
+.lockblockheader h4 {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 20%;
+	font-weight: normal;
+}
+
+.lockblockcancel {
+	position: relative;
+	float: right;
+	width: 20%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-left: 2px solid #7DABFF;
+}
+
+.lockblockcancel input {
+	width: 100%;
+	height: 100%;
+	font-size: 30px;
+	background-color: #FCFCFC;
+	outline: none;
+	border: 0;
+	color: #333;
+}
+
+.lockblockcancel input:hover {
+	background-color: #7DABFF;
+	cursor: pointer;
+}
+
+.lockblockcancel input:active {
+	font-size: 28px;
+}
+
+.lockblocktable {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	border-collapse: separate;
+	border-spacing: 0 5px;
+}
+
+.lockblocktable tr td {
+	font-size: 1vw;
+	height: 30px;
+}
+
+.lockblocktable tr td:not(:first-child) {
+	padding-left: 5%;
+}
+
+.lockblocktable tr td:last-child {
+	width: 30px;
+}
+
+.lockblocktable tr td a {
+	border: 0px !important;
+	color: #7DABFF;
+	/*text-shadow: 0px 0px 1px #333;*/
+}
+
+.lockblocktable tr td a:hover {
+	color: #333;
+}
+
+.lockblocktable tr td button {
+	width: 100%;
+	height: 30px;
+	line-height: 24px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background-image: url("cog.png");
+}
+
+.lockblocktable tr td button:hover {
+	cursor: pointer;
+}
+
+.lockblocktable tr td button:focus {
+	outline: none;
+}
+
+.cog {
+	height: 25px;
+	width: 25px;
+}
+
+.lockblock p {
+	padding-left: 10%;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	display: inline-block;
+}
+
+.noteinput {
+	width: 30.5px;
+	height: 30px;
+	display: inline-block;
+	float: right;
+	font-size: 18px;
+	background-color: #7DABFF;
+	outline: none;
+	border: 2px solid #969696;
+	margin-right: 10%;
+	padding: 0;
+	color: #333;
+}
+
+.noteinput:hover {
+	background-color: #AADDFF;
+	cursor: pointer;
+}
+
+.noteinput:active {
+	font-size: 16px;
+}
+
+.locknote {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: 2px solid #333;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	max-height: 160px;
+	overflow: auto;
+}
+
+.locknote p {
+	display: block;
+	margin: 0;
+	padding-left: 5%;
+	padding-right: 5%;
+	word-wrap: break-word;
+}
+
+#addlockblock {
+	height: 400px;
+	width: 47%;
+	display: inline-block;
+	float: left;
+	border: 2px dashed #7DABFF;
+	margin-bottom: 50px;
+}
+
+#addlockblock span {
+	font-size: 200px;
+	display: block;
+}
+
+#addlockblock label {
+	font-size: 40px;
+	line-height: 50px;
+	display: inline-block;
+	vertical-align: bottom;
+	margin-right: 5%;
+}
+
+#addlocktext {
+	width: 40%;
+	height: 50px;
+	line-height: 50px;
+	border: 2px solid #969696;
+	font-size: 30px;
+	color: #333;
+	padding-left: 10px;
+	/* clear top/bottom padding */
+	padding: 0;
+	padding-left: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#addlocktext:hover, #addlocktext:focus {
+	border: 2px solid #333;
+	border-radius: 0;
+	outline: none;
+}
+
+#addlockblock p {
+	font-size: 18px;
+	margin-top: 30px;
+}
+
+.updateinput {
+	width: 50% !important;
+	height: 25px !important;
+	display: inline-block;
+	padding-left: 5px !important;
+	background-color: #FCFCFC !important;
+	border: 2px solid #7DABFF;
+	font-size: 18px;
+}
+
+.updateinput:hover {
+	cursor: text !important;
+	font-size: 18px !important;
+	border: 2px solid #969696;
+}
+
+.updateinput:focus {
+	outline: none;
+	border: 2px solid #969696;
+}
+
+h2 {
+	text-align: center;
+	margin-top: 50px;
+}
+
+
+
+/* MEDIA QUERIES */
+
+
+
+@media (max-width: 1200px) {
+
+	.lockblocktable tr td{
+		font-size: 1.6vw;
+	}
+}

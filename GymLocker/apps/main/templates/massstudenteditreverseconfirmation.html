@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Mass Student Edit Reverse Confirmation{% endblock %}
+
+{% block head %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static "massstudenteditreverseconfirmation.css" %}">
+<script src="{% static "massstudenteditredirect.js" %}"></script>
+{% endblock %}
+
+{% block body %}
+{% if reverse_query == "impossible" %}
+<h1>The last edit performed is nonreversible</h1></br>
+<h1>If severe data problems have occurred and they can't be fixed manually, please contact Tech Intern</h1>
+{% else %}
+<h1>Are you sure you want to reverse the edit?</h1></br>
+<span>It is important to note that, by the nature of the system, reversing a query only works for edits where there was a +/- edit on the value. It may also edit some undesired students as well. For example, if you add +1 to 2014 students, then ALL 2015 students, even the ones that were 2015 before the edit, will be affected by the reverse.</span></br></br>
+<span>If you are unsure of whether this is a safe decision, please double-check the edited data and see if the edit can be fixed manually without a reversal. If you don't want to perform either, please see Tech Intern to restore a backup of the database.</span></br></br>
+<h1>If you wish to reverse the edit, the following students will be affected:</h1></br>
+{% if subset_value|upper == "ALL"  or subset_value == "*" %}
+<span>All students</span></br>
+{% else %}
+<span>Students where {{ subset_attribute }} is {{ subset_value }}</span></br>
+{% endif %}
+<h1>The following changes will be made:</h1>
+{% if "+" in update_value or "-" in update_value %}
+<span>{{ update_value }} to {{ update_attribute }}</span>
+{% else %}
+<span>{{ update_attribute }} will change to {{ update_value }}</span>
+{% endif %}
+<input id="confirmbutton" type="submit" value="Confirm Reversal" onClick="location.href='/edit/mass/{{ subset_attribute }}/{{ subset_value }}/{{ update_attribute }}/{{ update_value }}'">
+{% endif %}
+{% endblock %}

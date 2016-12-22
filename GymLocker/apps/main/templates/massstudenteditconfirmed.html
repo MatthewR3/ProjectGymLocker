@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Mass Student Edit Confirmed{% endblock %}
+
+{% block head %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static "massstudenteditconfirmed.css" %}">
+<script src="{% static "massstudenteditredirect.js" %}"></script>
+{% endblock %}
+
+{% block body %}
+<h1>Data changes {{ status }}</h1>
+{% if status == "failure" %}
+<h1>No changes were made to the database</h1>
+<h1>Please contact Tech Intern</h1>
+{% else %}
+<h1>The following students were edited:</h1></br>
+{% if subset_value|upper == "ALL"  or subset_value == "*" %}
+<span>All students</span></br>
+{% else %}
+<span>Students where {{ subset_attribute }} was {{ subset_value }}</span></br>
+{% endif %}
+<h1>The following changes were made:</h1>
+{% if "+" in update_value or "-" in update_value %}
+<span>{{ update_value }} to {{ update_attribute }}</span>
+{% else %}
+<span>{{ update_attribute }} was changed to {{ update_value }}</span>
+{% endif %}
+<input id="reversebutton" type="button" value="Attempt to Reverse" onClick="location.href='/edit/mass/reverse/confirm/'">
+{% endif %}
+{% endblock %}

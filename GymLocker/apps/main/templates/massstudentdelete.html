@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Mass Student Delete{% endblock %}
+
+{% block head %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static "massstudentdelete.css" %}">
+<script src="{% static "massstudentdeleteredirect.js" %}"></script>
+{% endblock %}
+
+{% block body %}
+<h1>Mass Student Delete is a powerful tool that can delete multiple students at a time. Please exercise caution.</h1>
+<span>With ID, YIS, Period, Tardies, or Rentals, you may enter < or > in the first text box, and enter + or - in the second text box</span></br></br>
+<span>Delete all students where</span>
+<select class="selectbar" id="selectbar">
+  <option value="ID">ID</option>
+  <option value="First Name">First Name</option>
+  <option value="Last Name">Last Name</option>
+  <option value="YIS">YIS</option>
+  <option value="Tardies">Tardies</option>
+  <option value="Rentals">Rentals</option>
+  <option value="Teacher">Teacher</option>
+  <option value="Period">Period</option>
+  <option value="Gender">Gender</option>
+  <option value="Locker Number">Locker Number</option>
+  <option value="Note">Note</option>
+</select>
+<span>is</span>
+<input class="textbar" id="textbar" type="text" placeholder="Value"></br>
+<p id="error"></p>
+<input id="submitbutton" type="submit" value="Submit" onClick="get_confirmation()">
+{% endblock %}

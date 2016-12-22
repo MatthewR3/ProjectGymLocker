@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Mass Student Deletion Confirmation{% endblock %}
+
+{% block head %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static "massstudenteditconfirmation.css" %}">
+<script src="{% static "massstudenteditredirect.js" %}"></script>
+{% endblock %}
+
+{% block body %}
+<h1>The following students will be deleted:</h1></br>
+{% if subset_value|upper == "ALL"  or subset_value == "*" %}
+<span>All students</span></br>
+{% else %}
+<span>Students where {{ subset_attribute }} is {{ subset_value }}</span></br>
+{% endif %}
+<input id="confirmbutton" type="submit" value="Confirm Delete" onClick="location.href='/delete/mass/{{ subset_attribute }}/{{ subset_value }}'">
+{% endblock %}

@@ -1,0 +1,25 @@
+<div id="results">
+	{% if results|length > 0 %}
+	<table id="resultstable" class="tablesorter" cellpadding="0" cellspacing="0">
+		<thead>
+			<tr>
+				<th>Serial Number</th>
+				<th>Combination</th>
+				<th>Owner</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- Code for full name: {{ listing.3|add:" "|add:listing.2|truncatechars:40 }-->
+			{% for lock in results %}
+			<tr>
+				<td><a href="/view/individual/locks/{{ lock.1 }}">{{ lock.1 }}</a></td>
+				<td>{{ lock.2 }}</td>
+				<td>{% if lock.3 != None %}<a href="/view/individual/students/{{ lock.4 }}">{{ lock.3 }}</a>{% endif %}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	{% else %}
+	<h1>No Matching Locks</h1>
+	{% endif %}
+</div>

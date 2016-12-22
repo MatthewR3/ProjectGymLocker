@@ -1,0 +1,46 @@
+h1 {
+	line-height: 75px;
+}
+
+span {
+	display: block;
+	font-size: 30px;
+	line-height: 50px;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+#confirmbutton {
+	display: block;
+	color: #333;
+	background-color: #FCFCFC;
+	height: 50px;
+	width: 40%;
+	font-size: 25px;
+	line-height: 46px;
+	border: 2px solid #7DABFF;
+	margin-top: 50px;
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-bottom: 50px;
+	/* Clears top/bottom padding */
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#confirmbutton:hover {
+	border: 2px solid #969696;
+	border-radius: 0;
+	outline: none;
+	cursor: pointer;
+}
+
+#confirmbutton:active {
+	font-size: 23px;
+}
+
+#confirmbutton:focus {
+	outline: none;
+}

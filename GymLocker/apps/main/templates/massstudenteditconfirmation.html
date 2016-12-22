@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Mass Student Edit Confirmation{% endblock %}
+
+{% block head %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static "massstudenteditconfirmation.css" %}">
+<script src="{% static "massstudenteditredirect.js" %}"></script>
+{% endblock %}
+
+{% block body %}
+<h1>The following students will be affected:</h1></br>
+{% if subset_value|upper == "ALL"  or subset_value == "*" %}
+<span>All students</span></br>
+{% else %}
+<span>Students where {{ subset_attribute }} is {{ subset_value }}</span></br>
+{% endif %}
+<h1>The following changes will be made:</h1>
+{% if "+" in update_value or "-" in update_value %}
+<span>{{ update_value }} to {{ update_attribute }}</span>
+{% else %}
+<span>{{ update_attribute }} will change to {{ update_value }}</span>
+{% endif %}
+<input id="confirmbutton" type="submit" value="Confirm Edit" onClick="location.href='/edit/mass/{{ subset_attribute }}/{{ subset_value }}/{{ update_attribute }}/{{ update_value }}'">
+{% endblock %}

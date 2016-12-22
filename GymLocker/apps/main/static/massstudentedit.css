@@ -1,0 +1,99 @@
+h1 {
+	margin-bottom: 50px;
+	line-height: 75px;
+}
+
+span {
+	display: inline-block;
+	font-size: 30px;
+	line-height: 50px;
+	margin-bottom: 30px;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.selectbar {
+	display: inline-block;
+	color: #333;
+	background-color: #FCFCFC;
+	height: 50px;
+	width: 20%;
+	font-size: 25px;
+	line-height: 50px;
+	border: 2px solid #7DABFF;
+	/* Clears top/bottom padding */
+	padding: 0;
+	padding-left: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.selectbar:hover, .selectbar:focus {
+	border: 2px solid #969696;
+	border-radius: 0;
+	outline: none;
+}
+
+.textbar {
+	display: inline-block;
+	color: #333;
+	background-color: #FCFCFC;
+	height: 50px;
+	width: 20%;
+	font-size: 25px;
+	line-height: 50px;
+	border: 2px solid #7DABFF;
+	/* Clears top/bottom padding */
+	padding: 0;
+	padding-left: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.textbar:hover, .textbar:focus {
+	border: 2px solid #969696;
+	border-radius: 0;
+	outline: none;
+}
+
+#submitbutton {
+	display: block;
+	color: #333;
+	background-color: #FCFCFC;
+	height: 50px;
+	width: 40%;
+	font-size: 25px;
+	line-height: 46px;
+	border: 2px solid #7DABFF;
+	margin-top: 50px;
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-bottom: 50px;
+	/* Clears top/bottom padding */
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#submitbutton:hover {
+	border: 2px solid #969696;
+	border-radius: 0;
+	outline: none;
+	cursor: pointer;
+}
+
+#submitbutton:active {
+	font-size: 23px;
+}
+
+#submitbutton:focus {
+	outline: none;
+}
+
+#error {
+	color: #FF4444;
+	margin-top: 30px;
+}

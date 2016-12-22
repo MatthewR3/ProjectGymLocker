@@ -1,0 +1,19 @@
+Version 1.1
+---------------
+1/17/16
+
+
+Updates:
+
+-Added sortable tables with sort indicators
+-Added limit options to searches
+-Added multi-parameter searches
+-Changed design of homepage, search pages, and individual view pages and color scheme of all pages
+-Changed display options for searches and class views to show more relevant fields
+-Added images to replace any "C" boxes to indicate an updatable field
+-Added multi-lock support and viewing from the individual student view page
+
+Bugfixes:
+
+-Fixed search pages loading all records upon page load
+-Removed apache folder (relic from linux-hosted versions)

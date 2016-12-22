@@ -1,0 +1,47 @@
+table {
+	width: 50%;
+	margin-left: 25%;
+}
+
+table tr td {
+	font-size: 25px;
+	width: 50%;
+	padding-bottom: 20px;
+}
+
+tr td:first-child {
+	text-align: left;
+}
+
+input {
+	width: 80%;
+	height: 40px;
+	border: 2px solid #7DABFF;
+	outline: none;
+	background-color: #FCFCFC;
+	font-size: 25px;
+}
+
+input[type=text], input[type=password] {
+	padding-left: 10px;
+	float: right;
+}
+
+input:hover, input:focus {
+	border-color: #969696;
+}
+
+#submit {
+	width: 40%;
+	height: 50px;
+	color: #333;
+}
+
+#submit:hover {
+	border: 2px solid #969696;
+	cursor: pointer;
+}
+
+#submit:active {
+	font-size: 23px;
+}

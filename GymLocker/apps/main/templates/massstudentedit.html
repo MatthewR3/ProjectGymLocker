@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Mass Student Edit{% endblock %}
+
+{% block head %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static "massstudentedit.css" %}">
+<script src="{% static "massstudenteditredirect.js" %}"></script>
+{% endblock %}
+
+{% block body %}
+<h1>Mass Student Edit is a powerful tool that can edit multiple students at a time. Please exercise caution.</h1>
+<span>With ID, YIS, Period, Tardies, or Rentals, you may enter < or > in the first text box, and enter + or - in the second text box</span></br></br>
+<span>Edit all students where</span>
+<select class="selectbar" id="firstselectbar">
+  <option value="ID">ID</option>
+  <option value="First Name">First Name</option>
+  <option value="Last Name">Last Name</option>
+  <option value="YIS">YIS</option>
+  <option value="Tardies">Tardies</option>
+  <option value="Rentals">Rentals</option>
+  <option value="Teacher">Teacher</option>
+  <option value="Period">Period</option>
+  <option value="Gender">Gender</option>
+  <option value="Locker Number">Locker Number</option>
+  <option value="Note">Note</option>
+</select>
+<span>is</span>
+<input class="textbar" id="firsttextbar" type="text" placeholder="Value"></br>
+<span>Change</span>
+<select class="selectbar" id="secondselectbar">
+  <option value="First Name">First Name</option>
+  <option value="Last Name">Last Name</option>
+  <option value="YIS">YIS</option>
+  <option value="Tardies">Tardies</option>
+  <option value="Rentals">Rentals</option>
+  <option value="Teacher">Teacher</option>
+  <option value="Period">Period</option>
+  <option value="Gender">Gender</option>
+  <option value="Locker Number">Locker Number</option>
+  <option value="Note">Note</option>
+</select>
+<span>to</span>
+<input class="textbar" id="secondtextbar" type="text" placeholder="Value">
+<p id="error"></p>
+<input id="submitbutton" type="submit" value="Submit" onClick="get_confirmation()">
+{% endblock %}

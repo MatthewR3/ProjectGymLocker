@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Mass Student Delete Confirmed{% endblock %}
+
+{% block head %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static "massstudenteditconfirmed.css" %}">
+<script src="{% static "massstudenteditredirect.js" %}"></script>
+{% endblock %}
+
+{% block body %}
+<h1>Data changes {{ status }}</h1>
+{% if status == "failure" %}
+<h1>No changes were made to the database</h1>
+<h1>Please contact Tech Intern</h1>
+{% else %}
+<h1>The following students were deleted:</h1></br>
+{% if subset_value|upper == "ALL"  or subset_value == "*" %}
+<span>All students</span></br>
+{% else %}
+<span>Students where {{ subset_attribute }} was {{ subset_value }}</span></br>
+{% endif %}
+{% endif %}
+{% endblock %}

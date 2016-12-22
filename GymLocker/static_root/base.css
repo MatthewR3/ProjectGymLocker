@@ -1,0 +1,83 @@
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-size: 18px;
+	font-family: "Roboto", Arial, sans-serif;
+	color: #333;
+	background-color: #FCFCFC;
+}
+
+p {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+#header {
+	height: 50px;
+	line-height: 50px;
+	font-size: 25px;
+	border-bottom: 2px solid #7DABFF;
+	margin-bottom: 50px;
+}
+
+#header a {
+	color: #333;
+	text-shadow: 0px 0px 1px #333;
+}
+
+#header a:hover {
+	text-shadow: 0px 0px 3px #333;
+}
+
+#header div {
+	display: inline-block;
+	width: 30%;
+}
+
+#header div p {
+	display: inline;
+	width: 0;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #FCFCFC inset;
+}
+
+#container {
+	width: 80%;
+	min-height: 600px;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 50px;
+}
+
+@media (max-width: 1200px) {
+
+	#header {
+		font-size: 20px;
+	}
+
+	#container {
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	.listingdivvalue {
+		font-size: 1.4vw !important;
+	}
+}
